@@ -1,6 +1,6 @@
 ---
 - name: "remote install git java-jdk11 jenkins"
-  hosts: slave
+  hosts: 192.168.186.135
   tasks:
     - name : install git,python3,openssh-server packages>>>>>>
       ansible.builtin.yum:
