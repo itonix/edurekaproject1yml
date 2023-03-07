@@ -10,7 +10,6 @@
           - git
           - python3
           - openssh-server
-
     - name: installing java-jdk11>>> and jenkins>>>>>>
       ansible.builtin.command:
         cmd: "{{ item }}"
@@ -18,7 +17,6 @@
             - "wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo"
             - "rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key"
             - "yum install java-11-openjdk"
-
     - name: installing >>>docker>>>>>
       ansible.builtin.command:
         cmd: "{{ item }}"
@@ -27,7 +25,7 @@
            - "yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo"
            - "yum install docker-ce docker-ce-cli containerd.io"
     - name: starting docker service
-      ansible.builtin.service
-        name: docker.service
-        state: "started "
-        enabled: true
+      ansible.builtin.service:
+              name: docker
+              state: "started"
+              enabled: true
