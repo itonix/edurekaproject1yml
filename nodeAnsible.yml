@@ -30,5 +30,5 @@
               state: "started"
               enabled: true
     - name: command running 
-     ansible.builtin.command:
+      ansible.builtin.command:
        cmd: "docker run -itd -P tonygeorgethomas/addressbook"
