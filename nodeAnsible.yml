@@ -31,4 +31,4 @@
               enabled: true
     - name: command running 
       ansible.builtin.command:
-       cmd: "docker run -itd -P tonygeorgethomas/addressbook"
+       cmd: "docker run -itd -P tonygeorgethomas/addressbook:latest"
